@@ -1,0 +1,17 @@
+{
+  "language": "typescript",
+  "app": "npx ts-node main.ts",
+  "projectId": "a6347eb9-66f0-428d-856f-b116ac86af1f",
+  "sendCrashReports": "false",
+  "terraformProviders": [
+    "okta/okta@~> 3.35"
+  ],
+  "terraformModules": [
+    ".//modules/applications",
+    ".//modules/auth-servers"
+  ],
+  "context": {
+    "excludeStackIdFromLogicalIds": "true",
+    "allowSepCharsInLogicalIds": "true"
+  }
+}
