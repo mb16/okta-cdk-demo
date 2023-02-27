@@ -1,0 +1,13 @@
+{
+  "version": "0.15.5",
+  "stacks": {
+    "okta-cdk-demo": {
+      "name": "okta-cdk-demo",
+      "constructPath": "okta-cdk-demo",
+      "workingDirectory": "stacks/okta-cdk-demo",
+      "synthesizedStackPath": "stacks/okta-cdk-demo/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    }
+  }
+}
