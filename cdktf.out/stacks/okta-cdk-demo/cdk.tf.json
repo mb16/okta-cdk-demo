@@ -1,7 +1,8 @@
 {
   "//": {
     "metadata": {
-      "backend": "local",
+      "backend": "cloud",
+      "cloud": "tfc",
       "stackName": "okta-cdk-demo",
       "version": "0.15.5"
     },
@@ -302,9 +303,11 @@
     }
   },
   "terraform": {
-    "backend": {
-      "local": {
-        "path": "/Users/michaelbrandt/Documents/code/okta-cdk-demo/terraform.okta-cdk-demo.tfstate"
+    "cloud": {
+      "hostname": "app.terraform.io",
+      "organization": "dev-05844969-okta-com-DEV",
+      "workspaces": {
+        "name": "okta-terraform-ref-dev-env"
       }
     },
     "required_providers": {

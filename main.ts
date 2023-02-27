@@ -6,7 +6,7 @@ import * as Applications from "./.gen/modules/modules/applications";
 import * as AuthServers from "./.gen/modules/modules/auth-servers";
 
 import { Construct } from "constructs";
-import { App, TerraformStack } from "cdktf";
+import { App, CloudBackend, NamedCloudWorkspace, TerraformStack } from "cdktf";
 
 class MyStack extends TerraformStack {
   constructor(scope: Construct, id: string) {
@@ -154,14 +154,14 @@ You can read more about this at https://cdk.tf/variables*/
 }
 
 const app = new App();
-new MyStack(app, "okta-cdk-demo");
+const stack = new MyStack(app, "okta-cdk-demo");
 
-/*
+
 new CloudBackend(stack, {
   hostname: "app.terraform.io",
   organization: "dev-05844969-okta-com-DEV",
-  workspaces: new NamedCloudWorkspace("okta-cdk-demo"),
+  workspaces: new NamedCloudWorkspace("okta-terraform-ref-dev-env"),
 });
-*/
+
 
 app.synth();
