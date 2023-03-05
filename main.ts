@@ -8,12 +8,13 @@ import * as AuthServers from "./.gen/modules/modules/auth-servers";
 import { Construct } from "constructs";
 import { App, CloudBackend, NamedCloudWorkspace, TerraformStack } from "cdktf";
 
+
 class MyStack extends TerraformStack {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
-    /*Terraform Variables are not always the best fit for getting inputs in the context of Terraform CDK.
-You can read more about this at https://cdk.tf/variables*/
+    //Terraform Variables are not always the best fit for getting inputs in the context of Terraform CDK.
+//You can read more about this at https://cdk.tf/variables
     const apiToken = new cdktf.TerraformVariable(this, "api_token", {});
     const baseUrl = new cdktf.TerraformVariable(this, "base_url", {});
     const orgName = new cdktf.TerraformVariable(this, "org_name", {});
@@ -51,6 +52,13 @@ You can read more about this at https://cdk.tf/variables*/
         "Group that contains all users that represent Service Accounts",
       name: "Okta Service Accounts",
     });
+
+    new okta.group.Group(this, "michaels_group", {
+      description:
+        "Group to verify CDK",
+      name: "Michael's Group",
+    });
+
     const oktaGroupTestGroup = new okta.group.Group(this, "test_group", {
       description: "For testing and demonstration",
       name: "Renamed Test Group",
@@ -153,6 +161,7 @@ You can read more about this at https://cdk.tf/variables*/
   }
 }
 
+
 const app = new App();
 const stack = new MyStack(app, "okta-cdk-demo");
 
@@ -160,7 +169,7 @@ const stack = new MyStack(app, "okta-cdk-demo");
 new CloudBackend(stack, {
   hostname: "app.terraform.io",
   organization: "dev-05844969-okta-com-DEV",
-  workspaces: new NamedCloudWorkspace("okta-terraform-ref-dev-env"),
+  workspaces: new NamedCloudWorkspace("okta-cdk-demo"),
 });
 
 
