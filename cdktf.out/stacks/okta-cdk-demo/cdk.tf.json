@@ -18,42 +18,6 @@
       }
     ]
   },
-  "resource": {
-    "okta_app_oauth": {
-      "MichaelApp": {
-        "//": {
-          "metadata": {
-            "path": "okta-cdk-demo/MichaelApp",
-            "uniqueId": "MichaelApp"
-          }
-        },
-        "grant_types": [
-          "authorization_code"
-        ],
-        "label": "Michael App",
-        "omit_secret": false,
-        "redirect_uris": [
-          "https://localhost:5001/signin-oidc"
-        ],
-        "response_types": [
-          "code"
-        ],
-        "type": "web"
-      }
-    },
-    "okta_group": {
-      "michaels_group": {
-        "//": {
-          "metadata": {
-            "path": "okta-cdk-demo/michaels_group",
-            "uniqueId": "michaels_group"
-          }
-        },
-        "description": "Group to verify CDK",
-        "name": "Michael's Group"
-      }
-    }
-  },
   "terraform": {
     "cloud": {
       "hostname": "app.terraform.io",
