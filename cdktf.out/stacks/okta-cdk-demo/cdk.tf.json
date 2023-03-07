@@ -19,6 +19,25 @@
     ]
   },
   "resource": {
+    "okta_app_oauth": {
+      "MichaelApp": {
+        "//": {
+          "metadata": {
+            "path": "okta-cdk-demo/MichaelApp",
+            "uniqueId": "MichaelApp"
+          }
+        },
+        "grant_types": [
+          "authorization_code"
+        ],
+        "label": "Michael App",
+        "omit_secret": false,
+        "response_types": [
+          "code"
+        ],
+        "type": "web"
+      }
+    },
     "okta_group": {
       "michaels_group": {
         "//": {

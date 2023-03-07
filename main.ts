@@ -32,6 +32,31 @@ class MyStack extends TerraformStack {
       name: "Michael's Group",
     });
 
+    new okta.appOauth.AppOauth(this, "MichaelApp", {
+      label: "Michael App",
+      type: "web",
+      omitSecret: false,
+      grantTypes: ["authorization_code"],
+      responseTypes: ["code"]
+    })
+
+
+/*
+
+resource "okta_app_oauth" "sample_dotnet" {
+  label = "Sample DotNet"
+  type = "web"
+  consent_method = "REQUIRED"
+  login_uri = "https://localhost:5001/authorization-code/callback"
+  post_logout_redirect_uris = ["https://localhost:5001/signout-callback-oidc"]
+  redirect_uris = ["https://localhost:5001/signin-oidc"]
+  omit_secret = false
+  grant_types = ["authorization_code"]
+  response_types = ["code"]
+}
+
+*/
+
 
 
     new okta.provider.OktaProvider(this, "okta", {
