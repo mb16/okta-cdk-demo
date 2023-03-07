@@ -1,0 +1,11 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node",
+  "features": {
+      "terraform": {
+          "version": "latest",
+          "tflint": "latest",
+          "terragrunt": "latest"
+      }
+  },
+  "postCreateCommand": "npm install && npm install --global cdktf-cli@latest"
+}
