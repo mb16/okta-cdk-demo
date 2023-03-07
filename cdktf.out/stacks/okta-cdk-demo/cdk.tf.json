@@ -29,26 +29,6 @@
         },
         "description": "Group to verify CDK",
         "name": "Michael's Group"
-      },
-      "second_group": {
-        "//": {
-          "metadata": {
-            "path": "okta-cdk-demo/second_group",
-            "uniqueId": "second_group"
-          }
-        },
-        "description": "Another Group to verify CDK",
-        "name": "Second Group"
-      },
-      "third_group": {
-        "//": {
-          "metadata": {
-            "path": "okta-cdk-demo/third_group",
-            "uniqueId": "third_group"
-          }
-        },
-        "description": "Third Group to verify CDK",
-        "name": "Third Group"
       }
     }
   },
