@@ -39,6 +39,16 @@
         },
         "description": "Another Group to verify CDK",
         "name": "Second Group"
+      },
+      "third_group": {
+        "//": {
+          "metadata": {
+            "path": "okta-cdk-demo/third_group",
+            "uniqueId": "third_group"
+          }
+        },
+        "description": "Third Group to verify CDK",
+        "name": "Second Group"
       }
     }
   },

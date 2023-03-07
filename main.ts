@@ -38,6 +38,12 @@ class MyStack extends TerraformStack {
       name: "Second Group",
     });
 
+    new okta.group.Group(this, "third_group", {
+      description:
+        "Third Group to verify CDK",
+      name: "Second Group",
+    });
+
     new okta.provider.OktaProvider(this, "okta", {
       apiToken: apiToken.value,
       baseUrl: baseUrl.value,
