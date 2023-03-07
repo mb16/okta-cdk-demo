@@ -37,7 +37,8 @@ class MyStack extends TerraformStack {
       type: "web",
       omitSecret: false,
       grantTypes: ["authorization_code"],
-      responseTypes: ["code"]
+      responseTypes: ["code"],
+      redirectUris: ["https://localhost:5001/signin-oidc"]
     })
 
 
